@@ -5,17 +5,18 @@ Created on Sun Oct  8 00:16:54 2023
 @author: lenovo
 """
 
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Oct  7 15:04:32 2023
-
-@author: lenovo
-"""
-
 import base64
 import streamlit as st
 import pandas as pd
 from sklearn.cluster import DBSCAN
+
+import subprocess
+
+# Define the command to install scikit-learn
+install_command = 'pip install scikit-learn'
+
+# Run the command
+subprocess.run(install_command, shell=True)
 
 #Title
 st.title("Distance Based Clustering App")
